@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JBPlanet.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JBPlanetsController : NSObject
+
+@property NSArray *planets;
+@property JBPlanet *pluto;
 
 @end
 
