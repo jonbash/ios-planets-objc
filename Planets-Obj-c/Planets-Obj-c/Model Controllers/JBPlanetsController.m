@@ -21,24 +21,24 @@ NSString *_kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
         _planets = [[NSArray alloc] init];
         _planets = [[NSArray alloc] initWithObjects:
                     [[JBPlanet alloc] initWithName:@"Mercury"
-                                             image:[UIImage imageNamed:@"mercury.png"]],
+                                             image:[UIImage imageNamed:@"mercury"]],
                     [[JBPlanet alloc] initWithName:@"Venus"
-                                             image:[UIImage imageNamed:@"venus.png"]],
+                                             image:[UIImage imageNamed:@"venus"]],
                     [[JBPlanet alloc] initWithName:@"Earth"
-                                             image:[UIImage imageNamed:@"earth.png"]],
+                                             image:[UIImage imageNamed:@"earth"]],
                     [[JBPlanet alloc] initWithName:@"Mars"
-                                             image:[UIImage imageNamed:@"mars.png"]],
+                                             image:[UIImage imageNamed:@"mars"]],
                     [[JBPlanet alloc] initWithName:@"Jupiter"
-                                             image:[UIImage imageNamed:@"jupiter.png"]],
+                                             image:[UIImage imageNamed:@"jupiter"]],
                     [[JBPlanet alloc] initWithName:@"Saturn"
-                                             image:[UIImage imageNamed:@"saturn.png"]],
+                                             image:[UIImage imageNamed:@"saturn"]],
                     [[JBPlanet alloc] initWithName:@"Uranus"
-                                             image:[UIImage imageNamed:@"uranus.png"]],
+                                             image:[UIImage imageNamed:@"uranus"]],
                     [[JBPlanet alloc] initWithName:@"Neptune"
-                                             image:[UIImage imageNamed:@"neptune.png"]],
+                                             image:[UIImage imageNamed:@"neptune"]],
                     nil];
         _pluto = [[JBPlanet alloc] initWithName:@"Pluto"
-                                          image:[UIImage imageNamed:@"pluto.png"]];
+                                          image:[UIImage imageNamed:@"pluto"]];
     }
     return self;
 }

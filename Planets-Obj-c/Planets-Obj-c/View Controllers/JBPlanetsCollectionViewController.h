@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "JBSettingsViewController.h"
 #import "JBPlanetCollectionViewCell.h"
+#import "JBPlanetsController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JBPlanetsCollectionViewController : UICollectionViewController
+@interface JBPlanetsCollectionViewController : UICollectionViewController <UIPopoverPresentationControllerDelegate, UIAdaptivePresentationControllerDelegate>
 
-
+@property JBPlanetsController *planetsController;
 
 @end
 

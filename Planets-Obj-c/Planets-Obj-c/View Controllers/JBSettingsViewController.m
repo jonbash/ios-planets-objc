@@ -15,9 +15,15 @@
 
 @implementation JBSettingsViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // works
+    BOOL plutoIsPlanet = [NSUserDefaults.standardUserDefaults boolForKey:JBPlanetsController.kIsPlutoAPlanetKey];
+    self.plutoSwitch.on = plutoIsPlanet;
+    // doesn't work
+    //    BOOL plutoIsPlanet = [NSUserDefaults.standardUserDefaults valueForKey:JBPlanetsController.kIsPlutoAPlanetKey];
+    //    [self.plutoSwitch setOn:plutoIsPlanet];
 }
 
 /*
@@ -31,11 +37,13 @@
 */
 
 - (IBAction)doneButtonTapped:(id)sender {
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
-- (IBAction)plutoSwitchChanged:(id)sender {
-    [NSUserDefaults.standardUserDefaults
-     setBool:_plutoSwitch.isOn
-     forKey:JBPlanetsController.kIsPlutoAPlanetKey];
+- (IBAction)plutoSwitchChanged:(UISwitch *)sender {
+    BOOL plutoIsPlanet = sender.isOn;
+    [NSUserDefaults.standardUserDefaults setBool:plutoIsPlanet
+                                          forKey:JBPlanetsController.kIsPlutoAPlanetKey];
 }
+
 @end
