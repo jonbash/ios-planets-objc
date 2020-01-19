@@ -16,6 +16,8 @@
 		991EE68423D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68323D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m */; };
 		991EE68823D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68723D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m */; };
 		991EE68B23D3D78500E21DE2 /* JBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68A23D3D78500E21DE2 /* JBSettingsViewController.m */; };
+		991EE68E23D3D90400E21DE2 /* JBPlanet.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68D23D3D90400E21DE2 /* JBPlanet.m */; };
+		991EE69323D3D9AD00E21DE2 /* JBPlanetsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE69223D3D9AD00E21DE2 /* JBPlanetsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,10 @@
 		991EE68723D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBPlanetCollectionViewCell.m; sourceTree = "<group>"; };
 		991EE68923D3D78500E21DE2 /* JBSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBSettingsViewController.h; sourceTree = "<group>"; };
 		991EE68A23D3D78500E21DE2 /* JBSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBSettingsViewController.m; sourceTree = "<group>"; };
+		991EE68C23D3D90400E21DE2 /* JBPlanet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBPlanet.h; sourceTree = "<group>"; };
+		991EE68D23D3D90400E21DE2 /* JBPlanet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBPlanet.m; sourceTree = "<group>"; };
+		991EE69123D3D9AD00E21DE2 /* JBPlanetsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBPlanetsController.h; sourceTree = "<group>"; };
+		991EE69223D3D9AD00E21DE2 /* JBPlanetsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBPlanetsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 			children = (
 				991EE68523D3D4A900E21DE2 /* Views */,
 				991EE68123D3D45A00E21DE2 /* View Controllers */,
+				991EE69023D3D99000E21DE2 /* Model Controllers */,
+				991EE68F23D3D90800E21DE2 /* Models */,
 				991EE68023D3D42E00E21DE2 /* Application */,
 			);
 			path = "Planets-Obj-c";
@@ -108,6 +116,24 @@
 				991EE68723D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		991EE68F23D3D90800E21DE2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				991EE68C23D3D90400E21DE2 /* JBPlanet.h */,
+				991EE68D23D3D90400E21DE2 /* JBPlanet.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		991EE69023D3D99000E21DE2 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				991EE69123D3D9AD00E21DE2 /* JBPlanetsController.h */,
+				991EE69223D3D9AD00E21DE2 /* JBPlanetsController.m */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +210,10 @@
 				991EE66923D3D42200E21DE2 /* AppDelegate.m in Sources */,
 				991EE67A23D3D42600E21DE2 /* main.m in Sources */,
 				991EE66C23D3D42200E21DE2 /* SceneDelegate.m in Sources */,
+				991EE68E23D3D90400E21DE2 /* JBPlanet.m in Sources */,
 				991EE68823D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m in Sources */,
 				991EE68B23D3D78500E21DE2 /* JBSettingsViewController.m in Sources */,
+				991EE69323D3D9AD00E21DE2 /* JBPlanetsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
