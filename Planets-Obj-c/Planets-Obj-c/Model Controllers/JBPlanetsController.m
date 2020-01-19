@@ -12,7 +12,7 @@
 
 @implementation JBPlanetsController
 
-NSString *kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
+NSString *_kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
 
 - (instancetype)init
 {
@@ -45,11 +45,15 @@ NSString *kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
 
 -(NSArray *) planets
 {
-    if ([NSUserDefaults valueForKey:kIsPlutoAPlanetKey]) {
+    if ([NSUserDefaults.standardUserDefaults valueForKey:_kIsPlutoAPlanetKey]) {
         return [_planets arrayByAddingObject:_pluto];
     } else {
         return _planets;
     }
+}
+
++(NSString *)kIsPlutoAPlanetKey {
+    return _kIsPlutoAPlanetKey;
 }
 
 @end

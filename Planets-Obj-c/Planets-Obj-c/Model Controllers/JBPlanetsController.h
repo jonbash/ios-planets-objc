@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JBPlanetsController : NSObject
 
+@property(class, nonatomic, assign, readonly) NSString *kIsPlutoAPlanetKey;
+
 @property(nonatomic) NSArray *planets;
 @property(nonatomic) JBPlanet *pluto;
 
