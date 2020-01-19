@@ -12,6 +12,8 @@
 
 @implementation JBPlanetsController
 
+NSString *kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
+
 - (instancetype)init
 {
     self = [super init];
@@ -39,6 +41,15 @@
                                           image:[UIImage imageNamed:@"pluto.png"]];
     }
     return self;
+}
+
+-(NSArray *) planets
+{
+    if ([NSUserDefaults valueForKey:kIsPlutoAPlanetKey]) {
+        return [_planets arrayByAddingObject:_pluto];
+    } else {
+        return _planets;
+    }
 }
 
 @end
