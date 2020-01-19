@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *name;
 @property UIImage *image;
 
+- (instancetype)initWithName:(NSString *)name image:(UIImage *)image;
+
 @end
 
 NS_ASSUME_NONNULL_END
