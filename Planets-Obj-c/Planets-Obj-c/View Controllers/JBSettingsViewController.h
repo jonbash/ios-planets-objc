@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JBSettingsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UISwitch *plutoSwitch;
+
 - (IBAction)doneButtonTapped:(id)sender;
 - (IBAction)plutoSwitchChanged:(id)sender;
 

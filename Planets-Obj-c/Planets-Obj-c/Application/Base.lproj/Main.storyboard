@@ -117,6 +117,9 @@
                         <viewLayoutGuide key="safeArea" id="D7a-ie-9ka"/>
                     </view>
                     <size key="freeformSize" width="210" height="150"/>
+                    <connections>
+                        <outlet property="plutoSwitch" destination="xuU-UY-V60" id="QYF-nA-GJ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LpH-hE-eLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

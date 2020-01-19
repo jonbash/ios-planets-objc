@@ -7,6 +7,7 @@
 //
 
 #import "JBSettingsViewController.h"
+#import "JBPlanetsController.h"
 
 @interface JBSettingsViewController ()
 
@@ -33,5 +34,8 @@
 }
 
 - (IBAction)plutoSwitchChanged:(id)sender {
+    [NSUserDefaults.standardUserDefaults
+     setBool:_plutoSwitch.isOn
+     forKey:JBPlanetsController.kIsPlutoAPlanetKey];
 }
 @end
