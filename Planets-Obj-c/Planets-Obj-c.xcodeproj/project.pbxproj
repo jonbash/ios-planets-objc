@@ -13,6 +13,9 @@
 		991EE67423D3D42600E21DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 991EE67323D3D42600E21DE2 /* Assets.xcassets */; };
 		991EE67723D3D42600E21DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 991EE67523D3D42600E21DE2 /* LaunchScreen.storyboard */; };
 		991EE67A23D3D42600E21DE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE67923D3D42600E21DE2 /* main.m */; };
+		991EE68423D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68323D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m */; };
+		991EE68823D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68723D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m */; };
+		991EE68B23D3D78500E21DE2 /* JBSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 991EE68A23D3D78500E21DE2 /* JBSettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		991EE67623D3D42600E21DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		991EE67823D3D42600E21DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		991EE67923D3D42600E21DE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		991EE68223D3D49F00E21DE2 /* JBPlanetsCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBPlanetsCollectionViewController.h; sourceTree = "<group>"; };
+		991EE68323D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBPlanetsCollectionViewController.m; sourceTree = "<group>"; };
+		991EE68623D3D4B600E21DE2 /* JBPlanetCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBPlanetCollectionViewCell.h; sourceTree = "<group>"; };
+		991EE68723D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBPlanetCollectionViewCell.m; sourceTree = "<group>"; };
+		991EE68923D3D78500E21DE2 /* JBSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBSettingsViewController.h; sourceTree = "<group>"; };
+		991EE68A23D3D78500E21DE2 /* JBSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBSettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		991EE66623D3D42200E21DE2 /* Planets-Obj-c */ = {
 			isa = PBXGroup;
 			children = (
+				991EE68523D3D4A900E21DE2 /* Views */,
 				991EE68123D3D45A00E21DE2 /* View Controllers */,
 				991EE68023D3D42E00E21DE2 /* Application */,
 			);
@@ -83,8 +93,21 @@
 		991EE68123D3D45A00E21DE2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				991EE68223D3D49F00E21DE2 /* JBPlanetsCollectionViewController.h */,
+				991EE68323D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m */,
+				991EE68923D3D78500E21DE2 /* JBSettingsViewController.h */,
+				991EE68A23D3D78500E21DE2 /* JBSettingsViewController.m */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		991EE68523D3D4A900E21DE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				991EE68623D3D4B600E21DE2 /* JBPlanetCollectionViewCell.h */,
+				991EE68723D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				991EE68423D3D49F00E21DE2 /* JBPlanetsCollectionViewController.m in Sources */,
 				991EE66923D3D42200E21DE2 /* AppDelegate.m in Sources */,
 				991EE67A23D3D42600E21DE2 /* main.m in Sources */,
 				991EE66C23D3D42200E21DE2 /* SceneDelegate.m in Sources */,
+				991EE68823D3D4B600E21DE2 /* JBPlanetCollectionViewCell.m in Sources */,
+				991EE68B23D3D78500E21DE2 /* JBSettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
