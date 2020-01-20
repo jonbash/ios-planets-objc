@@ -34,7 +34,7 @@ static NSString * const reuseIdentifier = @"PlanetCell";
     // Register cell classes
 //    UINib *cellNib = [UINib nibWithNibName:@"JBPlanetCollectionViewCell" bundle:nil];
 //    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:reuseIdentifier];
-    [self.collectionView registerClass:[JBPlanetCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+//    [self.collectionView registerClass:[JBPlanetCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 
     [NSNotificationCenter.defaultCenter addObserver:self
                                            selector:NSSelectorFromString(@"updateViews")
@@ -62,9 +62,17 @@ static NSString * const reuseIdentifier = @"PlanetCell";
 
     JBPlanet *planet = [self.planetsController.planets objectAtIndex:indexPath.item];
 
-    [cell.imageView setImage:planet.image];
-    [cell.nameLabel setText:planet.name];
-    
+//    [cell.imageView setImage:planet.image];
+//    [cell.nameLabel setText:planet.name];
+    cell.imageView.image = planet.image;
+    cell.nameLabel.text = planet.name;
+
+    CGFloat possibleWidth = (self.view.frame.size.width / 2.0) - 40;
+    CGFloat possibleHeight = (self.view.frame.size.height / 2.0) - 40;
+    CGFloat cellWidth = MIN(possibleWidth, possibleHeight);
+
+    [cell setCellWidth:cellWidth];
+
     return cell;
 }
 
@@ -82,6 +90,10 @@ static NSString * const reuseIdentifier = @"PlanetCell";
     if ([segue.identifier isEqualToString:@"ShowSettingsSegue"]) {
         [segue.destinationViewController.popoverPresentationController setDelegate:self];
         [segue.destinationViewController.presentationController setDelegate:self];
+
+        JBPlanetCollectionViewCell *cell = [self.collectionView.visibleCells objectAtIndex:0];
+        UIImageView *image = cell.imageView;
+        NSLog(@"%@", image);
     }
 }
 

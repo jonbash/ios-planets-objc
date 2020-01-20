@@ -44,9 +44,9 @@ NSNotificationName _kPlutoSwitchWasFlipped = @"PlutoSwitchWasFlipped";
     return self;
 }
 
--(NSArray *) planets
-{
-    if ([NSUserDefaults.standardUserDefaults valueForKey:_kIsPlutoAPlanetKey]) {
+-(NSArray *) planets {
+    BOOL plutoIsPlanet = [NSUserDefaults.standardUserDefaults boolForKey:JBPlanetsController.kIsPlutoAPlanetKey];
+    if (plutoIsPlanet) {
         return [_planets arrayByAddingObject:_pluto];
     } else {
         return _planets;

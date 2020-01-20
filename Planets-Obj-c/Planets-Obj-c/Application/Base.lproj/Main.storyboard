@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5AG-42-jE1">
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5AG-42-jE1">
                             <size key="itemSize" width="120" height="140"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -23,48 +24,36 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlanetCell" id="u8c-GI-CwK" customClass="JBPlanetCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                <rect key="frame" x="57" y="0.0" width="300" height="328.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tWF-L6-hpe">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="328.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="WH8-Cp-VkC" userLabel="ContentView">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0PV-Xm-Lst">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-tk-keI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="111.5"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Planet Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWy-hH-PyN">
-                                                            <rect key="frame" x="0.0" y="115.5" width="120" height="24.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-tk-keI">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <constraints>
-                                                <constraint firstItem="0PV-Xm-Lst" firstAttribute="leading" secondItem="WH8-Cp-VkC" secondAttribute="leading" id="HEh-5b-upC"/>
-                                                <constraint firstAttribute="bottom" secondItem="0PV-Xm-Lst" secondAttribute="bottom" id="QZg-Dh-MED"/>
-                                                <constraint firstAttribute="trailing" secondItem="0PV-Xm-Lst" secondAttribute="trailing" id="XKa-8w-Alh"/>
-                                                <constraint firstItem="0PV-Xm-Lst" firstAttribute="top" secondItem="WH8-Cp-VkC" secondAttribute="top" id="cJD-xq-h4F"/>
+                                                <constraint firstAttribute="width" secondItem="BKJ-tk-keI" secondAttribute="height" multiplier="1:1" id="QoW-hP-1gJ"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="cDX-la-7HJ"/>
                                             </constraints>
-                                        </view>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Planet Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWy-hH-PyN">
+                                            <rect key="frame" x="0.0" y="304" width="300" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                </view>
-                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="WH8-Cp-VkC" secondAttribute="bottom" id="5O0-tz-Uso"/>
-                                    <constraint firstItem="WH8-Cp-VkC" firstAttribute="leading" secondItem="u8c-GI-CwK" secondAttribute="leading" id="QSa-4L-kCY"/>
-                                    <constraint firstItem="WH8-Cp-VkC" firstAttribute="top" secondItem="u8c-GI-CwK" secondAttribute="top" id="fMg-jc-pUN"/>
-                                    <constraint firstAttribute="trailing" secondItem="WH8-Cp-VkC" secondAttribute="trailing" id="nWk-2x-RSW"/>
-                                </constraints>
-                                <size key="customSize" width="120" height="140"/>
+                                    <constraints>
+                                        <constraint firstItem="PWy-hH-PyN" firstAttribute="leading" secondItem="tWF-L6-hpe" secondAttribute="leading" id="Cf1-fl-30H"/>
+                                        <constraint firstAttribute="trailing" secondItem="PWy-hH-PyN" secondAttribute="trailing" id="EJG-R6-nxo"/>
+                                        <constraint firstAttribute="trailing" secondItem="BKJ-tk-keI" secondAttribute="trailing" id="Vg8-1b-RUR"/>
+                                        <constraint firstItem="BKJ-tk-keI" firstAttribute="top" secondItem="tWF-L6-hpe" secondAttribute="top" id="XDz-oF-1tk"/>
+                                        <constraint firstItem="PWy-hH-PyN" firstAttribute="top" secondItem="BKJ-tk-keI" secondAttribute="bottom" constant="4" id="kS1-Jw-SyZ"/>
+                                        <constraint firstItem="BKJ-tk-keI" firstAttribute="leading" secondItem="tWF-L6-hpe" secondAttribute="leading" id="rye-4E-XJJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="PWy-hH-PyN" secondAttribute="bottom" constant="4" id="u6J-Un-QER"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="BKJ-tk-keI" id="2do-wj-lxw"/>
                                     <outlet property="nameLabel" destination="PWy-hH-PyN" id="Njd-f4-qqO"/>
@@ -162,6 +151,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="earth" width="1024" height="1024"/>
         <image name="gear" catalog="system" width="64" height="58"/>
     </resources>
 </document>
