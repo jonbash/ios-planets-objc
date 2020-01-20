@@ -37,13 +37,15 @@
 */
 
 - (IBAction)doneButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:true completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)plutoSwitchChanged:(UISwitch *)sender {
     BOOL plutoIsPlanet = sender.isOn;
     [NSUserDefaults.standardUserDefaults setBool:plutoIsPlanet
                                           forKey:JBPlanetsController.kIsPlutoAPlanetKey];
+    [NSNotificationCenter.defaultCenter postNotificationName:JBPlanetsController.kPlutoSwitchWasFlipped
+                                                      object:self];
 }
 
 @end

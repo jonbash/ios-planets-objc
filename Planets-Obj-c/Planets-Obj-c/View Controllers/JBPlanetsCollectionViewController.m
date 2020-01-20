@@ -33,12 +33,16 @@ static NSString * const reuseIdentifier = @"PlanetCell";
     
     // Register cell classes
     [self.collectionView registerClass:[JBPlanetCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    // Do any additional setup after loading the view.
+
+    [NSNotificationCenter.defaultCenter addObserver:self
+                                           selector:NSSelectorFromString(@"updateViews")
+                                               name:JBPlanetsController.kPlutoSwitchWasFlipped
+                                             object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.collectionView reloadData];
+    [self updateViews];
 }
 
 - (void)updateViews {
@@ -54,10 +58,10 @@ static NSString * const reuseIdentifier = @"PlanetCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JBPlanetCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
 
-    JBPlanet *planet = [self.planetsController.planets objectAtIndex:indexPath.row];
+    JBPlanet *planet = [self.planetsController.planets objectAtIndex:indexPath.item];
 
-    cell.imageView.image = planet.image;
-    cell.nameLabel.text = planet.name;
+    [cell.imageView setImage:planet.image];
+    [cell.nameLabel setText:planet.name];
     
     return cell;
 }

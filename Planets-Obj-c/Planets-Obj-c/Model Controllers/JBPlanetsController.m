@@ -13,6 +13,7 @@
 @implementation JBPlanetsController
 
 NSString *_kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
+NSNotificationName _kPlutoSwitchWasFlipped = @"PlutoSwitchWasFlipped";
 
 - (instancetype)init
 {
@@ -54,6 +55,9 @@ NSString *_kIsPlutoAPlanetKey = @"IsPlutoAPlanet";
 
 +(NSString *)kIsPlutoAPlanetKey {
     return _kIsPlutoAPlanetKey;
+}
++(NSNotificationName)kPlutoSwitchWasFlipped {
+    return _kPlutoSwitchWasFlipped;
 }
 
 @end

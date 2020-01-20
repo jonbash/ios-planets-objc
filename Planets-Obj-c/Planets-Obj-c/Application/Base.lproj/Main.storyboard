@@ -29,13 +29,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WH8-Cp-VkC" userLabel="ContentView">
+                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" translatesAutoresizingMaskIntoConstraints="NO" id="WH8-Cp-VkC" userLabel="ContentView">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0PV-Xm-Lst">
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-tk-keI">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BKJ-tk-keI">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="111.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Planet Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWy-hH-PyN">
@@ -47,18 +47,17 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="0PV-Xm-Lst" firstAttribute="leading" secondItem="WH8-Cp-VkC" secondAttribute="leading" id="HEh-5b-upC"/>
                                                 <constraint firstAttribute="bottom" secondItem="0PV-Xm-Lst" secondAttribute="bottom" id="QZg-Dh-MED"/>
                                                 <constraint firstAttribute="trailing" secondItem="0PV-Xm-Lst" secondAttribute="trailing" id="XKa-8w-Alh"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Xq9-n1-Nhd"/>
                                                 <constraint firstItem="0PV-Xm-Lst" firstAttribute="top" secondItem="WH8-Cp-VkC" secondAttribute="top" id="cJD-xq-h4F"/>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="uzS-KJ-Qfb"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                 </view>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="WH8-Cp-VkC" secondAttribute="bottom" id="5O0-tz-Uso"/>
                                     <constraint firstItem="WH8-Cp-VkC" firstAttribute="leading" secondItem="u8c-GI-CwK" secondAttribute="leading" id="QSa-4L-kCY"/>
@@ -113,7 +112,7 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Pluto a Planet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8M-UB-vJt">
-                                <rect key="frame" x="14" y="95" width="131" height="21"/>
+                                <rect key="frame" x="8" y="95" width="137" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -124,7 +123,9 @@
                             <constraint firstItem="D7a-ie-9ka" firstAttribute="trailing" secondItem="sKj-Yj-fyz" secondAttribute="trailing" constant="8" id="MR0-02-GbI"/>
                             <constraint firstItem="F8M-UB-vJt" firstAttribute="centerY" secondItem="xuU-UY-V60" secondAttribute="centerY" id="S0U-Cd-O8d"/>
                             <constraint firstItem="xuU-UY-V60" firstAttribute="trailing" secondItem="sKj-Yj-fyz" secondAttribute="trailing" id="S6l-69-60u"/>
+                            <constraint firstItem="sKj-Yj-fyz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="D7a-ie-9ka" secondAttribute="leading" constant="8" id="XF9-0F-giA"/>
                             <constraint firstItem="sKj-Yj-fyz" firstAttribute="top" secondItem="D7a-ie-9ka" secondAttribute="top" constant="8" id="Z3C-ur-lyS"/>
+                            <constraint firstItem="F8M-UB-vJt" firstAttribute="leading" secondItem="D7a-ie-9ka" secondAttribute="leading" constant="8" id="hVe-t2-rbk"/>
                             <constraint firstItem="xuU-UY-V60" firstAttribute="leading" secondItem="F8M-UB-vJt" secondAttribute="trailing" constant="8" id="kJR-r5-Ybx"/>
                             <constraint firstItem="xuU-UY-V60" firstAttribute="top" secondItem="sKj-Yj-fyz" secondAttribute="bottom" constant="8" id="sv4-Lf-QCW"/>
                         </constraints>
