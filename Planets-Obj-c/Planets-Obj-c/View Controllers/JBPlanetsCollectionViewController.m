@@ -32,6 +32,8 @@ static NSString * const reuseIdentifier = @"PlanetCell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
+//    UINib *cellNib = [UINib nibWithNibName:@"JBPlanetCollectionViewCell" bundle:nil];
+//    [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:reuseIdentifier];
     [self.collectionView registerClass:[JBPlanetCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
 
     [NSNotificationCenter.defaultCenter addObserver:self
